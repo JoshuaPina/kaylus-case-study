@@ -1,0 +1,29 @@
+site_name: kaylus-case-study
+site_author: J.D.P
+# Optional: link this to your GitHub repo
+# repo_url: https://github.com/your-username/kaylus-case-study 
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: indigo
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("src") # Points to your source code
+
+nav:
+  - Home: index.md
+  - Methodology: tutorials.md
+  - Technical Reference: reference.md
